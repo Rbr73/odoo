@@ -24,8 +24,8 @@ then
     echo "[options]
 ; This is the password that allows database operations:
 ; admin_passwd = admin
-db_host = False
-db_port = False
+db_host = True
+db_port = True
 db_user = $ODOO_USER
 db_password = False
 addons_path = /usr/lib/python2.7/site-packages/odoo/addons
