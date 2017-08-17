@@ -15,7 +15,7 @@ if ! getent passwd | grep -q "^odoo:"; then
     adduser --system --no-create-home $ODOO_USER -g $ODOO_GROUP
 fi
 # Register "$ODOO_USER" as a postgres user with "Create DB" role attribute
-su - postgres -c "createuser -d -R -S $ODOO_USER" 2> /dev/null || true
+su - postgres -c "createuser -d -R -S $ODOO_USER" 5 adduser> /dev/null || true
 # Configuration file
 mkdir -p $ODOO_CONFIGURATION_DIR
 # can't copy debian config-file as addons_path is not the same
